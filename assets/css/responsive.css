@@ -50,9 +50,6 @@
 	}
 
 	/* HEADER */
-	.site-header {
-		padding-top: 40px;
-	}
 
 	/* HERO */
 	.hero-content {
@@ -212,9 +209,6 @@
 	}
 
 	/* HEADER */
-	.site-header {
-		padding-top: 20px;
-	}
 	
 	.navbar-header .site-title {
 		padding-left: 15px;
@@ -262,14 +256,6 @@
 
 	.slicknav_icon-bar + .slicknav_icon-bar {
 		margin-top: 4px;
-	}
-
-	.site-header-white .slicknav_icon-bar {
-		background-color: #fff;
-	}
-
-	.site-header-white  .act .slicknav_icon-bar {
-		background-color: #26272d;
 	}
 
 	.act .slicknav_icon-bar:first-child, 

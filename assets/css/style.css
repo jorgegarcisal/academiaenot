@@ -1424,6 +1424,14 @@ body {
     min-width: 120px;
 }
 
+/* Iconos de servicios */
+.service-icon {
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 1.25rem;
+    display: block;
+}
+
 /* Botones responsive */
 @media (max-width: 768px) {
     .btn {
@@ -1455,6 +1463,10 @@ body {
     .section-map-feature .btn {
         margin: 3rem 0 5rem;
         min-width: 200px;
+    }
+    
+    .service-icon {
+        font-size: 3rem;
     }
 }
 

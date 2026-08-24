@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Academia Enot - Clases de Apoio en Pontevedra</title>
+    <script>
+        (function () {
+            try {
+                var lang = localStorage.getItem('academiaenot-lang');
+                if (lang === 'es' || lang === 'gl') {
+                    document.documentElement.lang = lang;
+                    if (lang === 'es') {
+                        document.documentElement.classList.add('i18n-pending');
+                        setTimeout(function () {
+                            document.documentElement.classList.remove('i18n-pending');
+                        }, 1500);
+                    }
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <meta name="description" content="Academia de apoio escolar en Pontevedra. Clases de Primaria, ESO, Bacharelato, Facultades e máis">
+    <meta name="author" content="Academia Enot">
+    <meta name="keywords" content="academia, clases particulares, apoio escolar, Pontevedra, ESO, Bacharelato, PAU">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Favicon
+    ================================================== -->
+    <link rel="icon" type="image/svg+xml" href="./assets/img/enot.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="./assets/img/enot.svg">
+    <link rel="apple-touch-icon" href="./assets/img/enot.svg">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jorgegarcisal.github.io/academia-enot/">
+    <meta property="og:title" content="Academia Enot - Clases de Apoio en Pontevedra">
+    <meta property="og:description" content="Academia de apoio escolar en Pontevedra. Clases de Primaria, ESO, Bacharelato, Facultades e máis">
+    <meta property="og:image" content="https://jorgegarcisal.github.io/academia-enot/./assets/img/enot.svg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jorgegarcisal.github.io/academia-enot/">
+    <meta property="twitter:title" content="Academia Enot - Clases de Apoio en Pontevedra">
+    <meta property="twitter:description" content="Academia de apoio escolar en Pontevedra. Clases de Primaria, ESO, Bacharelato, Facultades e máis">
+    <meta property="twitter:image" content="https://jorgegarcisal.github.io/academia-enot/./assets/img/enot.svg">
+
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+
+                <div class="navbar-header">
+                   
+                    <a class="site-title">
+                        <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="logo-img">
+                        Academia<span>Enot</span>
+                    </a>
+
+                </div><!-- /.navbar-header -->
+
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="active"><a href="#hero" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="#servizos" data-i18n="nav.services">Servizos</a></li>
+                        <li><a href="#niveis" data-i18n="nav.levels">Niveis</a></li>
+                        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+                        <li class="lang-switcher-item">
+                            <div class="lang-switcher" role="group" aria-label="Idioma">
+                                <button type="button" class="lang-btn active" data-lang="gl" data-i18n-aria="lang.gl" aria-label="Galego" aria-pressed="true">GL</button>
+                                <button type="button" class="lang-btn" data-lang="es" data-i18n-aria="lang.es" aria-label="Castelán" aria-pressed="false">ES</button>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                
+                <!-- Botón hamburguesa móvil -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>   
+        </nav><!-- /.site-navigation -->
+    </header><!-- /#mastheaed -->
+
+    <!-- Modal del menú móvil -->
+    <div class="mobile-menu-modal" id="mobile-menu-modal">
+        <div class="mobile-menu-content">
+            <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
+            <nav class="mobile-menu-nav">
+                <a href="#hero" class="mobile-menu-link active" data-i18n="nav.home">Inicio</a>
+                <a href="#servizos" class="mobile-menu-link" data-i18n="nav.services">Servizos</a>
+                <a href="#niveis" class="mobile-menu-link" data-i18n="nav.levels">Niveis</a>
+                <a href="#contacto" class="mobile-menu-link" data-i18n="nav.contact">Contacto</a>
+            </nav>
+            <div class="lang-switcher lang-switcher--mobile" role="group" aria-label="Idioma">
+                <button type="button" class="lang-btn active" data-lang="gl" data-i18n-aria="lang.gl" aria-label="Galego" aria-pressed="true">GL</button>
+                <button type="button" class="lang-btn" data-lang="es" data-i18n-aria="lang.es" aria-label="Castelán" aria-pressed="false">ES</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero" class="hero overlay">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-logo">
+                    <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="hero-logo-img">
+                    <span class="hero-title">Academia<span class="hero-title-bold">Enot</span></span>
+                </div>
+                <h1 data-i18n="hero.title">O teu éxito comeza aquí</h1>
+                <p data-i18n="hero.subtitle">Levamos anos axudando os estudantes a acadar os seus obxectivos académicos</p>
+                <a href="#servizos" class="btn btn-border" data-i18n="hero.cta">Contáctanos</a>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+        
+        <!-- Mouse scroll indicator -->
+        <div class="scroll-indicator">
+            <a href="#servizos" class="scroll-link">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="scroll-text" data-i18n="hero.scroll">Desliza para saber máis</div>
+            </a>
+        </div>
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section id="servizos" class="site-section section-features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h2 data-i18n="about.title">Quen somos</h2>
+                        <p data-i18n="about.p1">Somos un equipo que leva anos dedicándose a axudar os estudantes que necesitan apoio, xa sexa porque teñen dificultades, porque precisan algo de ánimo e constancia, ou porque desexan mellorar as súas notas.</p>
+                        <p data-i18n="about.p2">Damos clase a grupos pequenos ou ás veces clases particulares, e intentamos adaptarnos ás necesidades de cada alumno.</p>
+                        <a href="#contacto" class="btn btn-fill" data-i18n="about.cta">Consúltanos</a>
+                    </div>
+                    <div class="col-sm-7 hidden-xs">
+                        <img src="assets/img/ipad-pro.png" alt="Academia Enot">
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-features -->
+
+        <section id="niveis" class="site-section section-services gray-bg text-center">
+            <div class="container">
+                <h2 class="heading-separator" data-i18n="levels.title">Ofrecémosvos Clases de</h2>
+                <p class="subheading-text" data-i18n="levels.subtitle">Adaptamos cada clase ás necesidades específicas de cada alumno</p>
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-graduation-cap service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.primary.title">Primaria</h3>
+                            <p class="service-info" data-i18n="levels.primary.desc">Apoio en todas as materias de educación primaria para consolidar as bases da aprendizaxe.</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-book service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.eso.title">ESO</h3>
+                            <p class="service-info" data-i18n="levels.eso.desc">Clases de apoio para superar con éxito todas as materias da educación secundaria obrigatoria.</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-university service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.bach.title">Bacharelato</h3>
+                            <p class="service-info" data-i18n="levels.bach.desc">Preparación específica para superar o bacharelato e prepararte para a universidade.</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-flask service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.uni.title">Facultades</h3>
+                            <p class="service-info" data-i18n="levels.uni.desc">Apoio universitario en diferentes materias para estudantes de grao e máster.</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-pencil-square-o service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.pau.title">PAU</h3>
+                            <p class="service-info" data-i18n="levels.pau.desc">Preparación intensiva para as probas de acceso á universidade (Selectividade).</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-cogs service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.access.title">Accesos a Ciclos</h3>
+                            <p class="service-info" data-i18n="levels.access.desc">Preparación para probas de acceso a ciclos formativos, UNED e universidade.</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-wrench service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.cycles.title">Ciclos Formativos</h3>
+                            <p class="service-info" data-i18n="levels.cycles.desc">Apoio nas materias de ciclos formativos de grao medio e superior.</p>
+                        </div><!-- /.service -->
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="service">
+                            <i class="fa fa-language service-icon"></i>
+                            <h3 class="service-title" data-i18n="levels.galician.title">Lingua Galega</h3>
+                            <p class="service-info" data-i18n="levels.galician.desc">Preparación específica para os exames de Lingua Galega e certificacións.</p>
+                        </div><!-- /.service -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-services -->
+
+        <section class="site-section section-map-feature text-center">
+
+            <div class="container">
+                <h2 data-i18n="why.title">Por que elixirnos</h2>
+                <p data-i18n="why.subtitle">Comprometidos co éxito dos nosos alumnos dende hai anos</p>
+                <a href="#contacto" class="btn btn-fill" data-i18n="why.cta">Solicita Información</a>
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter" data-to="22" data-speed="2000">0</p>
+                            <h3 data-i18n="why.years">Anos de Experiencia</h3>
+                        </div><!-- /.counter-item -->
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter has-plus" data-to="1200" data-speed="2000">0</p>       
+                            <h3 data-i18n="why.students">Alumnos Aprobados</h3>
+                        </div> <!-- /.counter-item -->      
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter" data-to="8" data-speed="1000">0</p>
+                            <h3 data-i18n="why.levels">Niveis Educativos</h3>
+                        </div><!-- /.counter-item -->
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="counter-item">
+                            <p class="counter" data-to="100" data-speed="1000">0</p>
+                            <h3 data-i18n="why.dedication">% Dedicación</h3>
+                        </div><!-- /.counter-item -->
+                    </div>
+                </div>
+            </div>
+            
+        </section><!-- /.section-map-feature -->
+
+        <section class="site-section section-portfolio gray-bg">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="heading-separator" data-i18n="commitment.title">O noso Compromiso</h2>
+                    <p class="subheading-text" data-i18n="commitment.subtitle">Consúltanos e entre todos buscamos unha solución para ti</p>
+                </div>
+                <div class="row equal-height" style="margin-top: 30px;">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service" style="padding: 30px; background: white; margin-bottom: 20px; border-radius: 5px;">
+                            <i class="fa fa-users" style="font-size: 48px; color: #8B5CF6; margin-bottom: 20px;"></i>
+                            <h3 class="service-title" data-i18n="commitment.groups.title">Grupos Reducidos</h3>
+                            <p class="service-info" data-i18n="commitment.groups.desc">Traballamos con grupos pequenos para garantir unha atención personalizada a cada alumno.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service" style="padding: 30px; background: white; margin-bottom: 20px; border-radius: 5px;">
+                            <i class="fa fa-user" style="font-size: 48px; color: #8B5CF6; margin-bottom: 20px;"></i>
+                            <h3 class="service-title" data-i18n="commitment.private.title">Clases Particulares</h3>
+                            <p class="service-info" data-i18n="commitment.private.desc">Tamén ofrecemos clases individuais para unha atención totalmente personalizada.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service" style="padding: 30px; background: white; margin-bottom: 20px; border-radius: 5px;">
+                            <i class="fa fa-heart" style="font-size: 48px; color: #8B5CF6; margin-bottom: 20px;"></i>
+                            <h3 class="service-title" data-i18n="commitment.motivation.title">Ánimo e Constancia</h3>
+                            <p class="service-info" data-i18n="commitment.motivation.desc">Non só ensinamos, tamén motivamos e acompañamos no proceso de aprendizaxe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+        <section id="contacto" class="site-section section-newsletter text-center">
+            <div class="container">
+                <h2 data-i18n="contact.title">Contacta con Nós</h2>
+                <p class="subheading-text" data-i18n="contact.subtitle">Estamos aquí para axudarche. Consúltanos sen compromiso.</p>
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
+                        <i class="fa fa-phone" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.phone">Teléfono</h4>
+                        <p><a href="tel:+34986104940" style="color: #6a6f75;">986 104 940</a></p>
+                        <p><a href="tel:+34610337690" style="color: #6a6f75;">610 337 690</a></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
+                        <i class="fa fa-whatsapp" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.whatsapp">WhatsApp</h4>
+                        <p><a href="https://wa.me/34610337690" style="color: #6a6f75;">610 337 690</a></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
+                        <i class="fa fa-envelope" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.email">Email</h4>
+                        <p><a href="mailto:academiaenot@gmail.com" style="color: #6a6f75;">academiaenot@gmail.com</a></p>
+                    </div>
+                    <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
+                        <i class="fa fa-map-marker" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.address">Enderezo</h4>
+                        <p style="color: #6a6f75;">Rúa dos Ferreiros, n°22, baixo<br>36002 Pontevedra</p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-newsletter -->
+
+    </main><!-- /#main -->
+
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <a class="site-title">
+                        <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="logo-img">
+                        <span>Academia</span>Enot
+                    </a>
+                    <p data-i18n="footer.about1">Levamos anos dedicándonos a axudar os estudantes que necesitan apoio.</p>
+                    <p data-i18n="footer.about2">Clases en grupos pequenos e particulares adaptadas ás túas necesidades.</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <h3 data-i18n="footer.contact">Contacto</h3>
+                    <ul class="list-unstyled contact-links">
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:academiaenot@gmail.com">academiaenot@gmail.com</a></li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+34986104940">986 104 940</a></li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+34610337690">610 337 690</a></li>
+                        <li><i class="fa fa-whatsapp" aria-hidden="true"></i><a href="https://wa.me/34610337690">WhatsApp: 610 337 690</a></li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><p>Rúa dos Ferreiros, n°22, baixo<br>36002 Pontevedra</p></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <h3 data-i18n="footer.levels">Niveis</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#niveis" data-i18n="footer.primary">Primaria</a></li>
+                        <li><a href="#niveis" data-i18n="footer.eso">ESO</a></li>
+                        <li><a href="#niveis" data-i18n="footer.bach">Bacharelato</a></li>
+                        <li><a href="#niveis" data-i18n="footer.uni">Facultades</a></li>
+                        <li><a href="#niveis" data-i18n="footer.pau">PAU / Ciclos</a></li>
+                        <li><a href="#niveis" data-i18n="footer.galician">Lingua Galega</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="social-links">
+                            <a class="facebook-bg" href="https://www.facebook.com/academiaenot/?locale=es_ES" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        </div><!-- /.social-links -->
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="text-right">
+                            <p>&copy; Academia Enot</p>
+                            <p data-i18n="footer.rights">Todos os dereitos reservados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ddd;">
+                    <div class="col-xs-12 text-center">
+                        <p style="font-size: 11px; color: #888; margin: 0;">
+                            Icons by <a href="https://fontawesome.com/" target="_blank" style="color: #8B5CF6;">Font Awesome</a> | 
+                            Template based on <a href="https://github.com/msavov/html-freebie-agency-perfect" target="_blank" style="color: #8B5CF6;">Agency Perfect</a> by Milan Savov
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.copyright -->
+    </footer><!-- /#footer -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="assets/js/jquery.countTo.min.js"></script>
+    <script src="assets/js/jquery.shuffle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  
+</body>
+</html>

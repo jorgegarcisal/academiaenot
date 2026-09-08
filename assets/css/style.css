@@ -13,7 +13,7 @@
     --dark-purple: #6B46C1;         /* Morado oscuro - acentos */
     --light-purple: #C4B5FD;        /* Morado claro - fondos suaves */
     --text-dark: #1a1b20;           /* Gris muy oscuro - texto principal */
-    --text-light: #6a6f75;          /* Gris medio - texto secundario */
+    --text-light: #3f444a;          /* Gris oscuro - texto secundario (mejor contraste) */
 }
 
  /* TABLE OF CONTENT 
@@ -52,7 +52,7 @@ a {
     -o-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
     cursor: pointer;
-    color: #6a6f75;
+    color: var(--text-light);
 }
 
 a:focus,
@@ -65,8 +65,8 @@ a:hover {
 p {
     margin-bottom: 0;
     font-size: 14px;
-    font-weight: 300;
-    color: #6a6f75;
+    font-weight: 400;
+    color: var(--text-light);
     line-height: 22px;
 }
 
@@ -1729,7 +1729,7 @@ html.i18n-pending body {
     width: 20px;
     text-align: center;
     font-size: 18px;
-    color: #8c8f94;
+    color: #4a4f55;
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -1749,7 +1749,7 @@ html.i18n-pending body {
 .list-unstyled li a,
 .list-unstyled li p {
     font-size: 16px;
-    color: #8c8f94;
+    color: #4a4f55;
     font-weight: 300;
 }
 
@@ -1965,7 +1965,7 @@ a.linkedin-bg:hover {
 }
 
 .post-content a {
-    color: #8c8f94;   
+    color: #4a4f55;   
 }
 
 .post-content .read-more {
@@ -1977,7 +1977,7 @@ a.linkedin-bg:hover {
 .post-content .read-more:after {
     content: '';
     display: block;
-    background-color: #8c8f94;  
+    background-color: #4a4f55;  
     width: 20px;
     height: 2px;
     position: absolute;
@@ -2086,7 +2086,7 @@ a.linkedin-bg:hover {
 
 .post-comment-content-details p {
     display: inline-block;
-    color: #8c8f94;
+    color: #4a4f55;
 }
 
 .post-comment-content-details p + p {
@@ -2182,13 +2182,13 @@ a.linkedin-bg:hover {
 
 .contact-info h3 {
     margin-left: 0;
-    color: #8c8f94;
+    color: #4a4f55;
 }
 
 .contact-info .list-unstyled li {
     font-size: 14px;
     font-weight: 300;
-    color: #8c8f94;
+    color: #4a4f55;
 }
 
 .contact-info .list-unstyled + h3,

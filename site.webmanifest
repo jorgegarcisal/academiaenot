@@ -1,0 +1,29 @@
+{
+  "name": "Academia Enot",
+  "short_name": "Enot",
+  "description": "Academia de apoio escolar e clases particulares en Pontevedra",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8B5CF6",
+  "lang": "gl",
+  "icons": [
+    {
+      "src": "./assets/img/favicon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/img/enot.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

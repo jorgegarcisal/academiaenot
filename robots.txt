@@ -1,0 +1,13 @@
+# Academia Enot — https://academiaenot.es/
+User-agent: *
+Allow: /
+
+# Páginas de plantilla (no forman parte del sitio público)
+Disallow: /blog.html
+Disallow: /blog-post.html
+Disallow: /portfolio.html
+Disallow: /portfolio-item.html
+Disallow: /contact.html
+Disallow: /ui-elements.html
+
+Sitemap: https://academiaenot.es/sitemap.xml

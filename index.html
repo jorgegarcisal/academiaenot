@@ -1,46 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gl">
 <head>
 
     <!-- Basic Page Needs
     ================================================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Academia Enot - Clases de Apoio en Pontevedra</title>
+    <title>Academia Enot | Clases de Apoio e Particulares en Pontevedra</title>
 
-    <meta name="description" content="Academia de apoio escolar en Pontevedra. Clases de Primaria, ESO, Bacharelato, Facultades e máis">
+    <meta name="description" content="Academia Enot en Pontevedra: clases de apoio e particulares de Primaria, ESO, Bacharelato, PAU, ciclos e universidade. Grupos reducidos en Rúa dos Ferreiros.">
     <meta name="author" content="Academia Enot">
-    <meta name="keywords" content="academia, clases particulares, apoio escolar, Pontevedra, ESO, Bacharelato, PAU">
+    <meta name="keywords" content="academia Pontevedra, clases particulares Pontevedra, apoio escolar, clases ESO, Bacharelato, PAU, selectividade, Lingua Galega, Academia Enot">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="geo.region" content="ES-PO">
+    <meta name="geo.placename" content="Pontevedra">
+    <meta name="geo.position" content="42.4310;-8.6444">
+    <meta name="ICBM" content="42.4310, -8.6444">
+    <meta name="theme-color" content="#8B5CF6">
+
+    <link rel="canonical" href="https://academiaenot.es/">
+    <link rel="alternate" hreflang="gl" href="https://academiaenot.es/">
+    <link rel="alternate" hreflang="x-default" href="https://academiaenot.es/">
 
     <!-- Mobile Specific Metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=yes">
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Favicon
     ================================================== -->
     <link rel="icon" type="image/svg+xml" href="./assets/img/enot.svg">
-    <link rel="shortcut icon" type="image/svg+xml" href="./assets/img/enot.svg">
-    <link rel="apple-touch-icon" href="./assets/img/enot.svg">
-    
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
+
     <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="gl_ES">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jorgegarcisal.github.io/academia-enot/">
-    <meta property="og:title" content="Academia Enot - Clases de Apoio en Pontevedra">
-    <meta property="og:description" content="Academia de apoio escolar en Pontevedra. Clases de Primaria, ESO, Bacharelato, Facultades e máis">
-    <meta property="og:image" content="https://jorgegarcisal.github.io/academia-enot/./assets/img/enot.svg">
-    
+    <meta property="og:site_name" content="Academia Enot">
+    <meta property="og:url" content="https://academiaenot.es/">
+    <meta property="og:title" content="Academia Enot | Clases de Apoio e Particulares en Pontevedra">
+    <meta property="og:description" content="Academia Enot en Pontevedra: clases de apoio e particulares de Primaria, ESO, Bacharelato, PAU, ciclos e universidade. Grupos reducidos en Rúa dos Ferreiros.">
+    <meta property="og:image" content="https://academiaenot.es/assets/img/hero.jpg">
+    <meta property="og:image:alt" content="Academia Enot - clases de apoio en Pontevedra">
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jorgegarcisal.github.io/academia-enot/">
-    <meta property="twitter:title" content="Academia Enot - Clases de Apoio en Pontevedra">
-    <meta property="twitter:description" content="Academia de apoio escolar en Pontevedra. Clases de Primaria, ESO, Bacharelato, Facultades e máis">
-    <meta property="twitter:image" content="https://jorgegarcisal.github.io/academia-enot/./assets/img/enot.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://academiaenot.es/">
+    <meta name="twitter:title" content="Academia Enot | Clases de Apoio e Particulares en Pontevedra">
+    <meta name="twitter:description" content="Academia Enot en Pontevedra: clases de apoio e particulares de Primaria, ESO, Bacharelato, PAU, ciclos e universidade.">
+    <meta name="twitter:image" content="https://academiaenot.es/assets/img/hero.jpg">
+    <meta name="twitter:image:alt" content="Academia Enot - clases de apoio en Pontevedra">
+
+    <!-- Structured Data (LocalBusiness / EducationalOrganization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["EducationalOrganization", "LocalBusiness"],
+          "@id": "https://academiaenot.es/#organization",
+          "name": "Academia Enot",
+          "alternateName": "AcademiaEnot",
+          "url": "https://academiaenot.es/",
+          "logo": "https://academiaenot.es/assets/img/enot.svg",
+          "image": "https://academiaenot.es/assets/img/hero.jpg",
+          "description": "Academia de apoio escolar e clases particulares en Pontevedra. Primaria, ESO, Bacharelato, PAU, ciclos formativos e universidade.",
+          "email": "academiaenot@gmail.com",
+          "telephone": ["+34-986-104-940", "+34-610-337-690"],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rúa dos Ferreiros, nº 22, baixo",
+            "addressLocality": "Pontevedra",
+            "postalCode": "36002",
+            "addressRegion": "Pontevedra",
+            "addressCountry": "ES"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 42.4310,
+            "longitude": -8.6444
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Pontevedra"
+          },
+          "sameAs": [
+            "https://www.facebook.com/academiaenot/"
+          ],
+          "priceRange": "$$",
+          "currenciesAccepted": "EUR",
+          "paymentAccepted": "Cash, Credit Card",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Clases de apoio",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Apoio Primaria" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Apoio ESO" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Apoio Bacharelato" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Preparación PAU" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Apoio Facultades" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ciclos Formativos" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lingua Galega" } }
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://academiaenot.es/#website",
+          "url": "https://academiaenot.es/",
+          "name": "Academia Enot",
+          "inLanguage": "gl",
+          "publisher": { "@id": "https://academiaenot.es/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://academiaenot.es/#webpage",
+          "url": "https://academiaenot.es/",
+          "name": "Academia Enot | Clases de Apoio e Particulares en Pontevedra",
+          "isPartOf": { "@id": "https://academiaenot.es/#website" },
+          "about": { "@id": "https://academiaenot.es/#organization" },
+          "description": "Academia Enot en Pontevedra: clases de apoio e particulares de Primaria, ESO, Bacharelato, PAU, ciclos e universidade.",
+          "inLanguage": "gl"
+        }
+      ]
+    }
+    </script>
 
     <!-- Stylesheets
     ================================================== -->
@@ -67,8 +162,8 @@
 
                 <div class="navbar-header">
                    
-                    <a class="site-title">
-                        <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="logo-img">
+                    <a class="site-title" href="https://academiaenot.es/" title="Academia Enot - Inicio">
+                        <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="logo-img" width="40" height="40">
                         Academia<span>Enot</span>
                     </a>
 
@@ -118,9 +213,9 @@
                     <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="hero-logo-img">
                     <span class="hero-title">Academia<span class="hero-title-bold">Enot</span></span>
                 </div>
-                <h1>O teu éxito comeza aquí</h1>
-                <p>Levamos anos axudando aos estudantes a acadar os seus obxectivos académicos</p>
-                <a href="#servizos" class="btn btn-border">Contáctanos</a>
+                <h1>Clases de apoio e particulares en Pontevedra</h1>
+                <p>Levamos anos axudando aos estudantes a acadar os seus obxectivos académicos en Primaria, ESO, Bacharelato e máis</p>
+                <a href="#contacto" class="btn btn-border">Contáctanos</a>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
         
@@ -147,7 +242,7 @@
                         <a href="#contacto" class="btn btn-fill">Consúltanos</a>
                     </div>
                     <div class="col-sm-7 hidden-xs">
-                        <img src="assets/img/ipad-pro.png" alt="Academia Enot">
+                        <img src="assets/img/ipad-pro.png" alt="Estudante co material de apoio da Academia Enot" width="640" height="400" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -310,7 +405,11 @@
                     <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
                         <i class="fa fa-map-marker" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
                         <h4 style="font-weight: 600; margin-bottom: 10px;">Enderezo</h4>
-                        <p style="color: #555;">Rúa dos Ferreiros, n°22, baixo<br>36002 Pontevedra</p>
+                        <p style="color: #555;">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=R%C3%BAa+dos+Ferreiros+22+Pontevedra" target="_blank" rel="noopener noreferrer" style="color: #555;">
+                                Rúa dos Ferreiros, n°22, baixo<br>36002 Pontevedra
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -322,8 +421,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <a class="site-title">
-                        <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="logo-img">
+                    <a class="site-title" href="https://academiaenot.es/" title="Academia Enot - Inicio">
+                        <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="logo-img" width="40" height="40">
                         <span>Academia</span>Enot
                     </a>
                     <p>Levamos anos dedicándonos a axudar os estudantes que necesitan apoio.</p>

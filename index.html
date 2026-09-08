@@ -8,6 +8,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Academia Enot | Clases de Apoio e Particulares en Pontevedra</title>
+    <script>
+        (function () {
+            try {
+                var lang = localStorage.getItem('academiaenot-lang');
+                if (lang === 'es' || lang === 'gl') {
+                    document.documentElement.lang = lang;
+                    if (lang === 'es') {
+                        document.documentElement.classList.add('i18n-pending');
+                        setTimeout(function () {
+                            document.documentElement.classList.remove('i18n-pending');
+                        }, 1500);
+                    }
+                }
+            } catch (e) {}
+        })();
+    </script>
 
     <meta name="description" content="Academia Enot en Pontevedra: clases de apoio e particulares de Primaria, ESO, Bacharelato, PAU, ciclos e universidade. Grupos reducidos en Rúa dos Ferreiros.">
     <meta name="author" content="Academia Enot">
@@ -173,10 +189,16 @@
 
                     <ul class="nav navbar-nav navbar-right">
 
-                        <li class="active"><a href="index.html">Inicio</a></li>
-                        <li><a href="#servizos">Servizos</a></li>
-                        <li><a href="#niveis">Niveis</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li class="active"><a href="#hero" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="#servizos" data-i18n="nav.services">Servizos</a></li>
+                        <li><a href="#niveis" data-i18n="nav.levels">Niveis</a></li>
+                        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+                        <li class="lang-switcher-item">
+                            <div class="lang-switcher" role="group" aria-label="Idioma">
+                                <button type="button" class="lang-btn active" data-lang="gl" data-i18n-aria="lang.gl" aria-label="Galego" aria-pressed="true">GL</button>
+                                <button type="button" class="lang-btn" data-lang="es" data-i18n-aria="lang.es" aria-label="Castelán" aria-pressed="false">ES</button>
+                            </div>
+                        </li>
 
                     </ul>
 
@@ -198,11 +220,15 @@
         <div class="mobile-menu-content">
             <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
             <nav class="mobile-menu-nav">
-                <a href="index.html" class="mobile-menu-link">Inicio</a>
-                <a href="#servizos" class="mobile-menu-link">Servizos</a>
-                <a href="#niveis" class="mobile-menu-link">Niveis</a>
-                <a href="#contacto" class="mobile-menu-link">Contacto</a>
+                <a href="#hero" class="mobile-menu-link active" data-i18n="nav.home">Inicio</a>
+                <a href="#servizos" class="mobile-menu-link" data-i18n="nav.services">Servizos</a>
+                <a href="#niveis" class="mobile-menu-link" data-i18n="nav.levels">Niveis</a>
+                <a href="#contacto" class="mobile-menu-link" data-i18n="nav.contact">Contacto</a>
             </nav>
+            <div class="lang-switcher lang-switcher--mobile" role="group" aria-label="Idioma">
+                <button type="button" class="lang-btn active" data-lang="gl" data-i18n-aria="lang.gl" aria-label="Galego" aria-pressed="true">GL</button>
+                <button type="button" class="lang-btn" data-lang="es" data-i18n-aria="lang.es" aria-label="Castelán" aria-pressed="false">ES</button>
+            </div>
         </div>
     </div>
 
@@ -213,9 +239,9 @@
                     <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="hero-logo-img">
                     <span class="hero-title">Academia<span class="hero-title-bold">Enot</span></span>
                 </div>
-                <h1>Clases de apoio e particulares en Pontevedra</h1>
-                <p>Levamos anos axudando aos estudantes a acadar os seus obxectivos académicos en Primaria, ESO, Bacharelato e máis</p>
-                <a href="#contacto" class="btn btn-border">Contáctanos</a>
+                <h1 data-i18n="hero.title">Clases de apoio e particulares en Pontevedra</h1>
+                <p data-i18n="hero.subtitle">Levamos anos axudando aos estudantes a acadar os seus obxectivos académicos en Primaria, ESO, Bacharelato e máis</p>
+                <a href="#contacto" class="btn btn-border" data-i18n="hero.cta">Contáctanos</a>
             </div><!-- /.hero-text -->
         </div><!-- /.hero-content -->
         
@@ -225,7 +251,7 @@
                 <div class="mouse">
                     <div class="wheel"></div>
                 </div>
-                <div class="scroll-text">Desliza para saber máis</div>
+                <div class="scroll-text" data-i18n="hero.scroll">Desliza para saber máis</div>
             </a>
         </div>
     </div><!-- /.hero -->
@@ -236,10 +262,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5">
-                        <h2>Quen somos</h2>
-                        <p>Somos un equipo que leva anos dedicándose a axudar os estudantes que necesitan apoio, xa sexa porque teñen dificultades, porque precisan algo de ánimo e constancia, ou porque desexan mellorar as súas notas.</p>
-                        <p>Damos clase a grupos pequenos ou ás veces clases particulares, e intentamos adaptarnos ás necesidades de cada alumno.</p>
-                        <a href="#contacto" class="btn btn-fill">Consúltanos</a>
+                        <h2 data-i18n="about.title">Quen somos</h2>
+                        <p data-i18n="about.p1">Somos un equipo que leva anos dedicándose a axudar os estudantes que necesitan apoio, xa sexa porque teñen dificultades, porque precisan algo de ánimo e constancia, ou porque desexan mellorar as súas notas.</p>
+                        <p data-i18n="about.p2">Damos clase a grupos pequenos ou ás veces clases particulares, e intentamos adaptarnos ás necesidades de cada alumno.</p>
+                        <a href="#contacto" class="btn btn-fill" data-i18n="about.cta">Consúltanos</a>
                     </div>
                     <div class="col-sm-7 hidden-xs">
                         <img src="assets/img/ipad-pro.png" alt="Estudante co material de apoio da Academia Enot" width="640" height="400" loading="lazy">
@@ -250,63 +276,63 @@
 
         <section id="niveis" class="site-section section-services gray-bg text-center">
             <div class="container">
-                <h2 class="heading-separator">Ofrecémosvos Clases de</h2>
-                <p class="subheading-text">Adaptamos cada clase ás necesidades específicas de cada alumno</p>
+                <h2 class="heading-separator" data-i18n="levels.title">Ofrecémosvos Clases de</h2>
+                <p class="subheading-text" data-i18n="levels.subtitle">Adaptamos cada clase ás necesidades específicas de cada alumno</p>
                 <div class="row">
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-graduation-cap service-icon"></i>
-                            <h3 class="service-title">Primaria</h3>
-                            <p class="service-info">Apoio en todas as materias de educación primaria para consolidar as bases da aprendizaxe.</p>
+                            <h3 class="service-title" data-i18n="levels.primary.title">Primaria</h3>
+                            <p class="service-info" data-i18n="levels.primary.desc">Apoio en todas as materias de educación primaria para consolidar as bases da aprendizaxe.</p>
                         </div><!-- /.service -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-book service-icon"></i>
-                            <h3 class="service-title">ESO</h3>
-                            <p class="service-info">Clases de apoio para superar con éxito todas as materias da educación secundaria obrigatoria.</p>
+                            <h3 class="service-title" data-i18n="levels.eso.title">ESO</h3>
+                            <p class="service-info" data-i18n="levels.eso.desc">Clases de apoio para superar con éxito todas as materias da educación secundaria obrigatoria.</p>
                         </div><!-- /.service -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-university service-icon"></i>
-                            <h3 class="service-title">Bacharelato</h3>
-                            <p class="service-info">Preparación específica para superar o bacharelato e prepararte para a universidade.</p>
+                            <h3 class="service-title" data-i18n="levels.bach.title">Bacharelato</h3>
+                            <p class="service-info" data-i18n="levels.bach.desc">Preparación específica para superar o bacharelato e prepararte para a universidade.</p>
                         </div><!-- /.service -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-flask service-icon"></i>
-                            <h3 class="service-title">Facultades</h3>
-                            <p class="service-info">Apoio universitario en diferentes materias para estudantes de grao e máster.</p>
+                            <h3 class="service-title" data-i18n="levels.uni.title">Facultades</h3>
+                            <p class="service-info" data-i18n="levels.uni.desc">Apoio universitario en diferentes materias para estudantes de grao e máster.</p>
                         </div><!-- /.service -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-pencil-square-o service-icon"></i>
-                            <h3 class="service-title">PAU</h3>
-                            <p class="service-info">Preparación intensiva para as probas de acceso á universidade (Selectividade).</p>
+                            <h3 class="service-title" data-i18n="levels.pau.title">PAU</h3>
+                            <p class="service-info" data-i18n="levels.pau.desc">Preparación intensiva para as probas de acceso á universidade (Selectividade).</p>
                         </div><!-- /.service -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-cogs service-icon"></i>
-                            <h3 class="service-title">Accesos a Ciclos</h3>
-                            <p class="service-info">Preparación para probas de acceso a ciclos formativos, UNED e universidade.</p>
+                            <h3 class="service-title" data-i18n="levels.access.title">Accesos a Ciclos</h3>
+                            <p class="service-info" data-i18n="levels.access.desc">Preparación para probas de acceso a ciclos formativos, UNED e universidade.</p>
                         </div><!-- /.service -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-wrench service-icon"></i>
-                            <h3 class="service-title">Ciclos Formativos</h3>
-                            <p class="service-info">Apoio nas materias de ciclos formativos de grao medio e superior.</p>
+                            <h3 class="service-title" data-i18n="levels.cycles.title">Ciclos Formativos</h3>
+                            <p class="service-info" data-i18n="levels.cycles.desc">Apoio nas materias de ciclos formativos de grao medio e superior.</p>
                         </div><!-- /.service -->
                     </div>
                     <div class="col-md-3 col-xs-6">
                         <div class="service">
                             <i class="fa fa-language service-icon"></i>
-                            <h3 class="service-title">Lingua Galega</h3>
-                            <p class="service-info">Preparación específica para os exames de Lingua Galega e certificacións.</p>
+                            <h3 class="service-title" data-i18n="levels.galician.title">Lingua Galega</h3>
+                            <p class="service-info" data-i18n="levels.galician.desc">Preparación específica para os exames de Lingua Galega e certificacións.</p>
                         </div><!-- /.service -->
                     </div>
                 </div>
@@ -316,32 +342,32 @@
         <section class="site-section section-map-feature text-center">
 
             <div class="container">
-                <h2>Por que elixirnos</h2>
-                <p>Comprometidos co éxito dos nosos alumnos dende hai anos</p>
-                <a href="#contacto" class="btn btn-fill">Solicita Información</a>
+                <h2 data-i18n="why.title">Por que elixirnos</h2>
+                <p data-i18n="why.subtitle">Comprometidos co éxito dos nosos alumnos dende hai anos</p>
+                <a href="#contacto" class="btn btn-fill" data-i18n="why.cta">Solicita Información</a>
                 <div class="row">
                     <div class="col-sm-3 col-xs-6">
                         <div class="counter-item">
-                            <p class="counter" data-to="15" data-speed="2000">0</p>
-                            <h3>Anos de Experiencia</h3>
+                            <p class="counter" data-to="22" data-speed="2000">0</p>
+                            <h3 data-i18n="why.years">Anos de Experiencia</h3>
                         </div><!-- /.counter-item -->
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="counter-item">
-                            <p class="counter" data-to="500" data-speed="2000">0</p>       
-                            <h3>Alumnos Aprobados</h3>
+                            <p class="counter has-plus" data-to="1200" data-speed="2000">0</p>       
+                            <h3 data-i18n="why.students">Alumnos Aprobados</h3>
                         </div> <!-- /.counter-item -->      
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="counter-item">
                             <p class="counter" data-to="8" data-speed="1000">0</p>
-                            <h3>Niveis Educativos</h3>
+                            <h3 data-i18n="why.levels">Niveis Educativos</h3>
                         </div><!-- /.counter-item -->
                     </div>
                     <div class="col-sm-3 col-xs-6">
                         <div class="counter-item">
                             <p class="counter" data-to="100" data-speed="1000">0</p>
-                            <h3>% Dedicación</h3>
+                            <h3 data-i18n="why.dedication">% Dedicación</h3>
                         </div><!-- /.counter-item -->
                     </div>
                 </div>
@@ -352,29 +378,29 @@
         <section class="site-section section-portfolio gray-bg">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="heading-separator">O noso Compromiso</h2>
-                    <p class="subheading-text">Consúltanos e entre todos buscamos unha solución para ti</p>
+                    <h2 class="heading-separator" data-i18n="commitment.title">O noso Compromiso</h2>
+                    <p class="subheading-text" data-i18n="commitment.subtitle">Consúltanos e entre todos buscamos unha solución para ti</p>
                 </div>
                 <div class="row equal-height" style="margin-top: 30px;">
                     <div class="col-md-4 col-sm-6">
                         <div class="service" style="padding: 30px; background: white; margin-bottom: 20px; border-radius: 5px;">
                             <i class="fa fa-users" style="font-size: 48px; color: #8B5CF6; margin-bottom: 20px;"></i>
-                            <h3 class="service-title">Grupos Reducidos</h3>
-                            <p class="service-info">Traballamos con grupos pequenos para garantir unha atención personalizada a cada alumno.</p>
+                            <h3 class="service-title" data-i18n="commitment.groups.title">Grupos Reducidos</h3>
+                            <p class="service-info" data-i18n="commitment.groups.desc">Traballamos con grupos pequenos para garantir unha atención personalizada a cada alumno.</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="service" style="padding: 30px; background: white; margin-bottom: 20px; border-radius: 5px;">
                             <i class="fa fa-user" style="font-size: 48px; color: #8B5CF6; margin-bottom: 20px;"></i>
-                            <h3 class="service-title">Clases Particulares</h3>
-                            <p class="service-info">Tamén ofrecemos clases individuais para unha atención totalmente personalizada.</p>
+                            <h3 class="service-title" data-i18n="commitment.private.title">Clases Particulares</h3>
+                            <p class="service-info" data-i18n="commitment.private.desc">Tamén ofrecemos clases individuais para unha atención totalmente personalizada.</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="service" style="padding: 30px; background: white; margin-bottom: 20px; border-radius: 5px;">
                             <i class="fa fa-heart" style="font-size: 48px; color: #8B5CF6; margin-bottom: 20px;"></i>
-                            <h3 class="service-title">Ánimo e Constancia</h3>
-                            <p class="service-info">Non só ensinamos, tamén motivamos e acompañamos no proceso de aprendizaxe.</p>
+                            <h3 class="service-title" data-i18n="commitment.motivation.title">Ánimo e Constancia</h3>
+                            <p class="service-info" data-i18n="commitment.motivation.desc">Non só ensinamos, tamén motivamos e acompañamos no proceso de aprendizaxe.</p>
                         </div>
                     </div>
                 </div>
@@ -383,30 +409,30 @@
 
         <section id="contacto" class="site-section section-newsletter text-center">
             <div class="container">
-                <h2>Contacta con Nós</h2>
-                <p class="subheading-text">Estamos aquí para axudarche. Consúltanos sen compromiso.</p>
+                <h2 data-i18n="contact.title">Contacta con Nós</h2>
+                <p class="subheading-text" data-i18n="contact.subtitle">Estamos aquí para axudarche. Consúltanos sen compromiso.</p>
                 <div class="row" style="margin-top: 40px;">
                     <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
                         <i class="fa fa-phone" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
-                        <h4 style="font-weight: 600; margin-bottom: 10px;">Teléfono</h4>
-                        <p><a href="tel:+34986104940" style="color: #555;">986 104 940</a></p>
-                        <p><a href="tel:+34610337690" style="color: #555;">610 337 690</a></p>
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.phone">Teléfono</h4>
+                        <p><a href="tel:+34986104940" style="color: #6a6f75;">986 104 940</a></p>
+                        <p><a href="tel:+34610337690" style="color: #6a6f75;">610 337 690</a></p>
                     </div>
                     <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
                         <i class="fa fa-whatsapp" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
-                        <h4 style="font-weight: 600; margin-bottom: 10px;">WhatsApp</h4>
-                        <p><a href="https://wa.me/34610337690" style="color: #555;">610 337 690</a></p>
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.whatsapp">WhatsApp</h4>
+                        <p><a href="https://wa.me/34610337690" style="color: #6a6f75;">610 337 690</a></p>
                     </div>
                     <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
                         <i class="fa fa-envelope" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
-                        <h4 style="font-weight: 600; margin-bottom: 10px;">Email</h4>
-                        <p><a href="mailto:academiaenot@gmail.com" style="color: #555;">academiaenot@gmail.com</a></p>
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.email">Email</h4>
+                        <p><a href="mailto:academiaenot@gmail.com" style="color: #6a6f75;">academiaenot@gmail.com</a></p>
                     </div>
                     <div class="col-md-3 col-sm-6" style="margin-bottom: 30px;">
                         <i class="fa fa-map-marker" style="font-size: 36px; color: #8B5CF6; margin-bottom: 15px;"></i>
-                        <h4 style="font-weight: 600; margin-bottom: 10px;">Enderezo</h4>
-                        <p style="color: #555;">
-                            <a href="https://www.google.com/maps/search/?api=1&amp;query=R%C3%BAa+dos+Ferreiros+22+Pontevedra" target="_blank" rel="noopener noreferrer" style="color: #555;">
+                        <h4 style="font-weight: 600; margin-bottom: 10px;" data-i18n="contact.address">Enderezo</h4>
+                        <p style="color: #6a6f75;">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=R%C3%BAa+dos+Ferreiros+22+Pontevedra" target="_blank" rel="noopener noreferrer" style="color: #6a6f75;">
                                 Rúa dos Ferreiros, n°22, baixo<br>36002 Pontevedra
                             </a>
                         </p>
@@ -425,11 +451,11 @@
                         <img src="./assets/img/enot.svg" alt="Logo Academia Enot" class="logo-img" width="40" height="40">
                         <span>Academia</span>Enot
                     </a>
-                    <p>Levamos anos dedicándonos a axudar os estudantes que necesitan apoio.</p>
-                    <p>Clases en grupos pequenos e particulares adaptadas ás túas necesidades.</p>
+                    <p data-i18n="footer.about1">Levamos anos dedicándonos a axudar os estudantes que necesitan apoio.</p>
+                    <p data-i18n="footer.about2">Clases en grupos pequenos e particulares adaptadas ás túas necesidades.</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <h3>Contacto</h3>
+                    <h3 data-i18n="footer.contact">Contacto</h3>
                     <ul class="list-unstyled contact-links">
                         <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:academiaenot@gmail.com">academiaenot@gmail.com</a></li>
                         <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+34986104940">986 104 940</a></li>
@@ -440,14 +466,14 @@
                 </div>
                 <div class="clearfix visible-xs"></div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <h3>Niveis</h3>
+                    <h3 data-i18n="footer.levels">Niveis</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#niveis">Primaria</a></li>
-                        <li><a href="#niveis">ESO</a></li>
-                        <li><a href="#niveis">Bacharelato</a></li>
-                        <li><a href="#niveis">Facultades</a></li>
-                        <li><a href="#niveis">PAU / Ciclos</a></li>
-                        <li><a href="#niveis">Lingua Galega</a></li>
+                        <li><a href="#niveis" data-i18n="footer.primary">Primaria</a></li>
+                        <li><a href="#niveis" data-i18n="footer.eso">ESO</a></li>
+                        <li><a href="#niveis" data-i18n="footer.bach">Bacharelato</a></li>
+                        <li><a href="#niveis" data-i18n="footer.uni">Facultades</a></li>
+                        <li><a href="#niveis" data-i18n="footer.pau">PAU / Ciclos</a></li>
+                        <li><a href="#niveis" data-i18n="footer.galician">Lingua Galega</a></li>
                     </ul>
                 </div>
             </div>
@@ -463,7 +489,7 @@
                     <div class="col-xs-4">
                         <div class="text-right">
                             <p>&copy; Academia Enot</p>
-                            <p>Todos os dereitos reservados</p>
+                            <p data-i18n="footer.rights">Todos os dereitos reservados</p>
                         </div>
                     </div>
                 </div>
@@ -484,6 +510,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>

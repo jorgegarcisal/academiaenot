@@ -54,6 +54,7 @@
 	/* HERO */
 	.hero-content {
 		padding-top: 65px;
+		padding-bottom: 120px;
 	}
 
 	.hero-text {
@@ -246,7 +247,7 @@
 		height: 2px;
 		width: 22px;
 		display: block;
-		background-color: #26272d;
+		background-color: #1a1b20;
 		-webkit-transition: all 0.3s;
 		-moz-transition: all 0.3s;
 		-ms-transition: all 0.3s;
@@ -336,7 +337,7 @@
 
 	.slicknav_nav > li a {
 		display: inline-block;
-		color: #26272d;
+		color: #1a1b20;
 		font-size: 14px;
 	}
 
@@ -380,6 +381,7 @@
 	/* HERO */
 	.hero-content {
 		padding-top: 45px;
+		padding-bottom: 110px;
 	}
 
 	.hero-text p {

@@ -11,6 +11,77 @@ $(function () {
       }
   });
 
+  // Marcar en el menú la sección visible al hacer scroll
+  (function () {
+    var sectionIds = ['hero', 'servizos', 'niveis', 'contacto'];
+    var desktopItems = document.querySelectorAll('.navbar-nav > li:not(.lang-switcher-item)');
+    var mobileLinks = document.querySelectorAll('.mobile-menu-link');
+    var ticking = false;
+
+    function headerOffset() {
+      var header = document.querySelector('.site-header');
+      return header ? header.offsetHeight + 12 : 90;
+    }
+
+    function sectionTop(id) {
+      var el = document.getElementById(id);
+      if (!el) {
+        return Infinity;
+      }
+      return el.getBoundingClientRect().top + window.pageYOffset;
+    }
+
+    function matchesLink(href, id) {
+      if (!href) {
+        return false;
+      }
+      if (id === 'hero') {
+        return href === '#hero' || href === 'index.html' || href.indexOf('index.html') !== -1;
+      }
+      return href === '#' + id;
+    }
+
+    function setActive(id) {
+      desktopItems.forEach(function (li) {
+        var link = li.querySelector('a');
+        li.classList.toggle('active', !!(link && matchesLink(link.getAttribute('href'), id)));
+      });
+      mobileLinks.forEach(function (link) {
+        link.classList.toggle('active', matchesLink(link.getAttribute('href'), id));
+      });
+    }
+
+    function updateActiveSection() {
+      var probe = window.pageYOffset + headerOffset();
+      var current = sectionIds[0];
+      var nearBottom = (window.innerHeight + window.pageYOffset) >= (document.documentElement.scrollHeight - 80);
+
+      if (nearBottom) {
+        current = 'contacto';
+      } else {
+        for (var i = 0; i < sectionIds.length; i++) {
+          if (sectionTop(sectionIds[i]) <= probe) {
+            current = sectionIds[i];
+          }
+        }
+      }
+
+      setActive(current);
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateActiveSection);
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    updateActiveSection();
+  })();
+
   var delay=0, setTimeoutConst;
   $('.site-navigation:not(.onclick) .navbar-nav>li.dropdown, .site-navigation:not(.onclick) li.dropdown>ul>li.dropdown').hover(
   function(){
